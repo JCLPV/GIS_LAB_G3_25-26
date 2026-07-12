@@ -27,7 +27,7 @@
     y: { beginAtZero: true, grid: { color: COLORS.grid } },
     x: { grid: { display: false } },
   };
-
+/*
   function barChart(canvasId, label, data, color) {
     const el = document.getElementById(canvasId);
     if (!el || typeof Chart === "undefined") return;
@@ -50,11 +50,58 @@
       },
     });
   }
+*/
+function multiBarChart(canvasId, labels, meanData, minData, maxData) {
+    const el = document.getElementById(canvasId);
+    if (!el || typeof Chart === "undefined") return;
+    new Chart(el, {
+      type: "bar",
+      data: {
+        labels: labels,
+        datasets: [
+          {
+            label: "Mean Change",
+            data: meanData,
+            backgroundColor: "#2c3e50", // Dark Slate Blue
+            borderRadius: 4,
+          },
+          {
+            label: "Min Change",
+            data: minData,
+            backgroundColor: "#c0392b", // Crimson Red
+            borderRadius: 4,
+          },
+          {
+            label: "Max Change",
+            data: maxData,
+            backgroundColor: "#27ae60", // Emerald Green
+            borderRadius: 4,
+          }
+        ],
+      },
+      options: {
+        responsive: true,
+        plugins: { 
+          legend: { display: true, position: "top" } 
+        },
+        scales: {
+          y: { 
+            beginAtZero: false, 
+            grid: { color: COLORS.grid },
+            title: { display: true, text: "Concentration Change (µg/m³)" }
+          },
+          x: { grid: { display: false } },
+        },
+      },
+    });
+  }
 
-  // Step 6 — mean concentration per region (sample data, µg/m³)
-  barChart("chart-no2-bar", "NO2 mean (µg/m³)", [24.8, 19.3, 17.6, 18.9, 13.1], COLORS.no2);
-  barChart("chart-pm25-bar", "PM2.5 mean (µg/m³)", [12.4, 11.7, 10.9, 9.6, 8.8], COLORS.pm25);
-  barChart("chart-pm10-bar", "PM10 mean (µg/m³)", [18.2, 17.5, 16.8, 15.4, 13.9], COLORS.pm10);
+const transitionClasses = ["Stable Crops", "Crop Gain", "Crop Loss"];
+
+  // Step 6 — Multi-dataset execution using real group stats (France Crop Dynamics)
+  multiBarChart("chart-no2-bar", transitionClasses, [-0.9458, -0.9458, -0.7137], [-4.6751, -4.6751, -4.6751], [3.1563, 3.1563, 3.1563]);
+  multiBarChart("chart-pm25-bar", transitionClasses, [-0.8898, -0.7395, -0.7060], [-4.6751, -4.6751, -4.6751], [3.1563, 3.1563, 3.1563]);
+  multiBarChart("chart-pm10-bar", transitionClasses, [-1.0476, -0.9856, -0.9227], [-4.3773, -4.3773, -4.3773], [1.1967, 1.1967, 0.7946]);
 
   // Step 4 — national AMAC change 2021 -> 2023 (sample data)
   (function () {
@@ -85,23 +132,17 @@
     });
   })();
 
-  // Step 8 — population exposure pie charts (sample data, % of population)
-  function pieChart(canvasId, color) {
+  // Step 8 — Group population exposure pie charts (Configured for 2 classes)
+  function pieChart(canvasId, dataValues, colors) {
     const el = document.getElementById(canvasId);
     if (!el || typeof Chart === "undefined") return;
     new Chart(el, {
       type: "pie",
       data: {
-        labels: ["Very low", "Low", "Moderate", "High", "Very high"],
+        labels: ["Moderate Exposure (Class 2)", "High Exposure (Class 3)"],
         datasets: [{
-          data: [8, 22, 35, 24, 11],
-          backgroundColor: [
-            "#eaf3fa",
-            "#a8d1ea",
-            color,
-            "#8a3b2f",
-            "#4a1c14",
-          ],
+          data: dataValues,
+          backgroundColor: colors,
           borderWidth: 2,
           borderColor: "#ffffff",
         }],
@@ -112,18 +153,24 @@
       },
     });
   }
-
-  pieChart("chart-pie-no2", COLORS.no2);
-  pieChart("chart-pie-pm25", COLORS.pm25);
-  pieChart("chart-pie-pm10", COLORS.pm10);
+// Execution for all 3 pollutants (Replace 50.0 placeholders with your group's true percentages)
+  pieChart("chart-pie-no2", [60.3, 39.7], ["#ace4e4", COLORS.no2]);
+  pieChart("chart-pie-pm25", [83.3, 16.7], ["#ace4e4", COLORS.pm25]);
+  pieChart("chart-pie-pm10", [59.3, 40.7], ["#ace4e4", COLORS.pm10]);
 
   // Bivariate 3x3 legends (population x pollution). Classic blue/pink bivariate palette —
   // swap for the ramp exported from your QGIS bivariate style if it differs.
-  const BIVARIATE_PALETTE = [
-    // low pollution -> high pollution (columns), low pop -> high pop (rows, bottom to top)
-    ["#e8e8e8", "#dfb0d6", "#be64ac"], // low population row
-    ["#ace4e4", "#a5add3", "#8c62aa"], // mid population row
-    ["#5ac8c8", "#5698b9", "#3b4994"], // high population row
+const BIVARIATE_PALETTE = [
+    // Bottom Row 1 (Lowest Pollution Ramps)
+    ["#ffffff", "#ffe3e7", "#ffbccc", "#ff8fa9", "#ff6b8b"],
+    // Row 2
+    ["#e0ffff", "#d0e4ee", "#c0c9dd", "#b0aecd", "#a092bd"],
+    // Row 3
+    ["#aeffff", "#9ee2ee", "#8ec7dd", "#7eadcd", "#6e92bd"],
+    // Row 4
+    ["#5effff", "#4ee2ee", "#3ec6dd", "#2eabcd", "#1e91bd"],
+    // Top Row 5 (Highest Pollution Ramps)
+    ["#00ffff", "#00dbe6", "#00b5cd", "#0090b4", "#006b9b"]
   ];
 
   function renderBivariateLegend(containerId) {

@@ -122,20 +122,18 @@
               <div class="col-lg-6">
                 <div class="data-table-wrap">
                   <table class="aq-table">
-                    <thead><tr><th>Region</th><th>Mean (µg/m³)</th><th>Min</th><th>Max</th></tr></thead>
+                    <thead><tr><th>Crop Transition Class</th><th>Mean Change</th><th>Min Change</th><th>Max Change</th></tr></thead>
                     <tbody>
-                      <tr><td class="pollutant-no2">Île-de-France</td><td>24.8</td><td>11.2</td><td>41.6</td></tr>
-                      <tr><td class="pollutant-no2">Auvergne-Rhône-Alpes</td><td>19.3</td><td>7.5</td><td>36.9</td></tr>
-                      <tr><td class="pollutant-no2">Hauts-de-France</td><td>17.6</td><td>8.1</td><td>29.4</td></tr>
-                      <tr><td class="pollutant-no2">Provence-Alpes-Côte d'Azur</td><td>18.9</td><td>6.4</td><td>33.2</td></tr>
-                      <tr><td class="pollutant-no2">Nouvelle-Aquitaine</td><td>13.1</td><td>5.0</td><td>24.7</td></tr>
+                      <tr><td class="pollutant-no2">Stable</td><td>-0.9458</td><td>-4.6751</td><td>3.1563</td></tr>
+                      <tr><td class="pollutant-no2">Gain</td><td>-0.9458</td><td>-4.6751</td><td>3.1563</td></tr>
+                      <tr><td class="pollutant-no2">Loss</td><td>-0.7137</td><td>-4.6751</td><td>3.1563</td></tr>
                     </tbody>
                   </table>
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="chart-card">
-                  <h3>Mean NO2 by region</h3>
+                  <h3>Bar Char NO2</h3>
                   <p class="chart-sub">Sample data — µg/m³, 2023 annual mean</p>
                   <canvas id="chart-no2-bar"></canvas>
                 </div>
@@ -148,54 +146,65 @@
               <div class="col-lg-6">
                 <div class="data-table-wrap">
                   <table class="aq-table">
-                    <thead><tr><th>Region</th><th>Mean (µg/m³)</th><th>Min</th><th>Max</th></tr></thead>
+                    <thead><tr><th>Crop Transition Class</th><th>Mean Change</th><th>Min Change</th><th>Max Change</th></tr></thead>
                     <tbody>
-                      <tr><td class="pollutant-pm25">Île-de-France</td><td>12.4</td><td>6.1</td><td>19.8</td></tr>
-                      <tr><td class="pollutant-pm25">Auvergne-Rhône-Alpes</td><td>11.7</td><td>5.3</td><td>21.4</td></tr>
-                      <tr><td class="pollutant-pm25">Hauts-de-France</td><td>10.9</td><td>5.8</td><td>17.2</td></tr>
-                      <tr><td class="pollutant-pm25">Provence-Alpes-Côte d'Azur</td><td>9.6</td><td>4.2</td><td>15.9</td></tr>
-                      <tr><td class="pollutant-pm25">Nouvelle-Aquitaine</td><td>8.8</td><td>3.9</td><td>14.1</td></tr>
+                      <tr>
+                        <td class="pollutant-pm25">Stable</td>
+                        <td>-0.8898</td>
+                        <td>-4.6751</td>
+                        <td>3.1563</td>
+                      </tr>
+                      <tr>
+                        <td class="pollutant-pm25">Gain</td>
+                        <td>-0.7395</td>
+                        <td>-4.6751</td>
+                        <td>3.1563</td>
+                      </tr>
+                      <tr>
+                        <td class="pollutant-pm25">Loss</td>
+                        <td>-0.7060</td>
+                        <td>-4.6751</td>
+                        <td>3.1563</td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
-              <div class="col-lg-6">
-                <div class="chart-card">
-                  <h3>Mean PM2.5 by region</h3>
-                  <p class="chart-sub">Sample data — µg/m³, 2023 annual mean</p>
-                  <canvas id="chart-pm25-bar"></canvas>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="tab-pane fade" id="zonal-pm10">
-            <div class="row gy-4">
-              <div class="col-lg-6">
-                <div class="data-table-wrap">
-                  <table class="aq-table">
-                    <thead><tr><th>Region</th><th>Mean (µg/m³)</th><th>Min</th><th>Max</th></tr></thead>
-                    <tbody>
-                      <tr><td class="pollutant-pm10">Île-de-France</td><td>18.2</td><td>9.4</td><td>27.6</td></tr>
-                      <tr><td class="pollutant-pm10">Auvergne-Rhône-Alpes</td><td>17.5</td><td>8.7</td><td>29.1</td></tr>
-                      <tr><td class="pollutant-pm10">Hauts-de-France</td><td>16.8</td><td>9.0</td><td>25.3</td></tr>
-                      <tr><td class="pollutant-pm10">Provence-Alpes-Côte d'Azur</td><td>15.4</td><td>7.1</td><td>23.8</td></tr>
-                      <tr><td class="pollutant-pm10">Nouvelle-Aquitaine</td><td>13.9</td><td>6.5</td><td>21.0</td></tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="chart-card">
-                  <h3>Mean PM10 by region</h3>
-                  <p class="chart-sub">Sample data — µg/m³, 2023 annual mean</p>
-                  <canvas id="chart-pm10-bar"></canvas>
-                </div>
-              </div>
+          <div class="col-lg-6">
+            <div class="chart-card">
+              <h3>Bar Char PM2.5</h3>
+              <p class="chart-sub">Sample data — µg/m³, 2023 annual mean</p>
+              <canvas id="chart-pm25-bar"></canvas>
+            </div>
             </div>
           </div>
         </div>
 
+        <div class="tab-pane fade" id="zonal-pm10">
+          <div class="row gy-4">
+            <div class="col-lg-6">
+              <div class="data-table-wrap">
+                <table class="aq-table">
+                  <thead><tr><th>Crop Transition Class</th><th>Mean Change</th><th>Min Change</th><th>Max Change</th></tr></thead>
+                  <tbody>
+                    <tr><td class="pollutant-pm10">Stable</td><td>-1.0476</td><td>-4.3773</td><td>1.1967</td></tr>
+                    <tr><td class="pollutant-pm10">Gain</td><td>-0.9856</td><td>-4.3773</td><td>1.1967</td></tr>
+                    <tr><td class="pollutant-pm10">Loss</td><td>-0.9227</td><td>-4.3773</td><td>0.7946</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="chart-card">
+                <h3>Mean PM10 by region</h3>
+                <p class="chart-sub">Sample data — µg/m³, 2023 annual mean</p>
+                <canvas id="chart-pm10-bar"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+<!--
         <div class="row gy-4 mt-1">
           <div class="col-12">
             <div class="chart-card">
@@ -204,7 +213,7 @@
               <canvas id="chart-amac"></canvas>
             </div>
           </div>
-        </div>
+        </div>-->
       </div>
     </section><!-- /Zonal statistics -->
 
@@ -224,10 +233,9 @@
           <div class="tab-pane fade show active" id="biv-no2">
             <div class="row gy-4 align-items-center">
               <div class="col-lg-7">
-                <div class="figure-placeholder">
-                  <i class="bi bi-grid-3x3-gap"></i>
-                  <p class="mb-1">NO2 bivariate map</p>
-                  <span class="filename">assets/img/results/no2_bivariate_map.png</span>
+                <div class="map-image-wrap">
+                  <!-- Real image tag added here -->
+                  <img src="assets/img/results/no2_bivariate_map.png" alt="NO2 Bivariate Map" class="img-fluid rounded shadow-sm">
                 </div>
               </div>
               <div class="col-lg-5">
@@ -246,10 +254,8 @@
           <div class="tab-pane fade" id="biv-pm25">
             <div class="row gy-4 align-items-center">
               <div class="col-lg-7">
-                <div class="figure-placeholder">
-                  <i class="bi bi-grid-3x3-gap"></i>
-                  <p class="mb-1">PM2.5 bivariate map</p>
-                  <span class="filename">assets/img/results/pm25_bivariate_map.png</span>
+                <div class="map-image-wrap">
+                  <img src="assets/img/results/pm25_bivariate_map.png" alt="PM2.5 Bivariate Map" class="img-fluid rounded shadow-sm">
                 </div>
               </div>
               <div class="col-lg-5">
@@ -266,10 +272,8 @@
           <div class="tab-pane fade" id="biv-pm10">
             <div class="row gy-4 align-items-center">
               <div class="col-lg-7">
-                <div class="figure-placeholder">
-                  <i class="bi bi-grid-3x3-gap"></i>
-                  <p class="mb-1">PM10 bivariate map</p>
-                  <span class="filename">assets/img/results/pm10_bivariate_map.png</span>
+                <div class="map-image-wrap">
+                  <img src="assets/img/results/pm10_bivariate_map.png" alt="PM10 Bivariate Map" class="img-fluid rounded shadow-sm">
                 </div>
               </div>
               <div class="col-lg-5">
@@ -291,7 +295,7 @@
     <section class="section light-background">
       <div class="container section-title text-start" data-aos="fade-up">
         <h2>Population Exposure</h2>
-        <p>Step 8 — population (<code>pop_sum</code>) by dissolved pollutant class (<code>pol_class_max</code>, max 5 zones)</p>
+        <p>Step 8 — population (<code>pop_sum</code>) by dissolved pollutant class (<code>pol_class_max</code>)</p>
       </div>
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4">
@@ -327,51 +331,46 @@
         <p>All 25 mandatory deliverables produced across Labs 2–4 (naming convention: <code>FRANCE_*</code>)</p>
       </div>
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="edit-note mb-4">
-          <i class="bi bi-pencil-square"></i>
-          <span>Replace the <code>href="#"</code> links below with real download links (GitHub raw URLs, OneDrive,
-          Google Drive or WeTransfer) once your files are uploaded, per the Lab Submission instructions.</span>
-        </div>
         <div class="row gy-4">
           <div class="col-md-4">
-            <h4 class="h6 mb-3">Steps 1–3 · Pollutant maps</h4>
+            <h4 class="h6 mb-3">Steps 1-3: Pollutant maps</h4>
             <div class="download-list">
-              <a href="#"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_CAMS_no2_2023_12.tif</span></a>
-              <a href="#"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_CAMS_pm2p5_2023_12.tif</span></a>
-              <a href="#"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_CAMS_pm10_2023_12.tif</span></a>
-              <a href="#"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_average_no2_2023.tif</span></a>
-              <a href="#"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_average_pm2p5_2023.tif</span></a>
-              <a href="#"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_average_pm10_2023.tif</span></a>
-              <a href="#"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_no2_concentration_map_2023.tif</span></a>
-              <a href="#"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_pm2p5_concentration_map_2023.tif</span></a>
-              <a href="#"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_pm10_concentration_map_2023.tif</span></a>
+              <a href="https://drive.google.com/file/d/1_caAe-cT06Um3d5mQutWs4JwHw_i2kbe/view?usp=drive_link" target="_blank" class="download-link"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_CAMS_no2_2023_12.tif</span></a>
+              <a href="https://drive.google.com/file/d/1kcdPIJ5z-0rskdHScuDVK7tvbC-5vmGY/view?usp=drive_link" target="_blank" class="download-link"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_CAMS_pm2p5_2023_12.tif</span></a>
+              <a href="https://drive.google.com/file/d/1SSJQLS-rV7eiAqi_VfvG2z73xpq1Vk41/view?usp=drive_link" target="_blank" class="download-link"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_CAMS_pm10_2023_12.tif</span></a>
+              <a href="https://drive.google.com/file/d/1tG9xWwzom86ZKU_UJBmp20nbb3igwQR-/view?usp=drive_link" target="_blank" class="download-link"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_average_no2_2023.tif</span></a>
+              <a href="https://drive.google.com/file/d/1gthz5DFRik4WzQ27dWQeTFBgve-e3PNC/view?usp=drive_link" target="_blank" class="download-link"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_average_pm2p5_2023.tif</span></a>
+              <a href="https://drive.google.com/file/d/1oTciHjAx9RaY2ZD2dwI8JLzAkOdf-q87/view?usp=drive_link" target="_blank" class="download-link"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_average_pm10_2023.tif</span></a>
+              <a href="https://drive.google.com/file/d/1Jp3IRmujdNG4sSsAwNghffgOUvjGwYzH/view?usp=drive_link" target="_blank" class="download-link"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_no2_concentration_map_2023.tif</span></a>
+              <a href="https://drive.google.com/file/d/1d40E2qxBrj27nkl-921wFUuqD9dPGvfO/view?usp=drive_link" target="_blank" class="download-link"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_pm2p5_concentration_map_2023.tif</span></a>
+              <a href="https://drive.google.com/file/d/1PSSQd3Jj-yeXgH09wfpe_AwJCIhAjayV/view?usp=drive_link" target="_blank" class="download-link"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_pm10_concentration_map_2023.tif</span></a>
             </div>
           </div>
           <div class="col-md-4">
-            <h4 class="h6 mb-3">Step 4 · AMAC change + styles</h4>
+            <h4 class="h6 mb-3">Step 4: AMAC change + styles</h4>
             <div class="download-list">
-              <a href="#"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_no2_2021_2023_AMAC_map.tif</span></a>
-              <a href="#"><i class="bi bi-file-earmark-code"></i> <span>FRANCE_no2_2021_2023_AMAC_map.qml</span></a>
-              <a href="#"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_pm2p5_2021_2023_AMAC_map.tif</span></a>
-              <a href="#"><i class="bi bi-file-earmark-code"></i> <span>FRANCE_pm2p5_2021_2023_AMAC_map.qml</span></a>
-              <a href="#"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_pm10_2021_2023_AMAC_map.tif</span></a>
-              <a href="#"><i class="bi bi-file-earmark-code"></i> <span>FRANCE_pm10_2021_2023_AMAC_map.qml</span></a>
+              <a href="https://drive.google.com/file/d/1tF4F9ldy62mMOFq7euvi2yK538Nv3NcL/view?usp=drive_link" target="_blank" class="download-link"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_no2_2021_2023_AMAC_map.tif</span></a>
+              <a href="https://drive.google.com/file/d/196yy9GzjdG3oihveK0gyo13pc6x1zkOO/view?usp=drive_link" target="_blank" class="download-link"><i class="bi bi-file-earmark-code"></i> <span>FRANCE_no2_2021_2023_AMAC_map.qml</span></a>
+              <a href="https://drive.google.com/file/d/1fHF9kowYWHKeu94KvDvzGupS6Y0kzY0g/view?usp=drive_link" target="_blank" class="download-link"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_pm2p5_2021_2023_AMAC_map.tif</span></a>
+              <a href="https://drive.google.com/file/d/125Vh4f_DeeWHJd8JNY5toxU5Z0CWNJvt/view?usp=drive_link" target="_blank" class="download-link"><i class="bi bi-file-earmark-code"></i> <span>FRANCE_pm2p5_2021_2023_AMAC_map.qml</span></a>
+              <a href="https://drive.google.com/file/d/1JDFWXiBvCH4r6yUIaWvKdIuCaCcp42Do/view?usp=drive_link" target="_blank" class="download-link"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_pm10_2021_2023_AMAC_map.tif</span></a>
+              <a href="https://drive.google.com/file/d/1vUAArRGyJKQ-8xjZCDSaCDPZzPZr0XC3/view?usp=drive_link" target="_blank" class="download-link"><i class="bi bi-file-earmark-code"></i> <span>FRANCE_pm10_2021_2023_AMAC_map.qml</span></a>
               <h4 class="h6 mb-3 mt-4">Step 5 · Land cover</h4>
-              <a href="#"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_LCC_2021_2023.tif</span></a>
+              <a href="https://drive.google.com/file/d/14m3GowZURSogSDh1HyqNsGP9halEmmSk/view?usp=drive_link" target="_blank" class="download-link"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_LCC_2021_2023.tif</span></a>
             </div>
           </div>
           <div class="col-md-4">
-            <h4 class="h6 mb-3">Steps 6–8 · Zonal, bivariate, exposure</h4>
+            <h4 class="h6 mb-3">Steps 6-8: Zonal, bivariate, exposure</h4>
             <div class="download-list">
-              <a href="#"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_no2_zonal_statistics_2021_2023.gpkg</span></a>
-              <a href="#"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_pm2p5_zonal_statistics_2021_2023.gpkg</span></a>
-              <a href="#"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_pm10_zonal_statistics_2021_2023.gpkg</span></a>
-              <a href="#"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_no2_2023_bivariate.gpkg</span></a>
-              <a href="#"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_pm2p5_2023_bivariate.gpkg</span></a>
-              <a href="#"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_pm10_2023_bivariate.gpkg</span></a>
-              <a href="#"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_no2_2023_chart.gpkg</span></a>
-              <a href="#"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_pm2p5_2023_chart.gpkg</span></a>
-              <a href="#"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_pm10_2023_chart.gpkg</span></a>
+              <a href="https://drive.google.com/file/d/1dEFnQk66hREa1pHGobvew1DzQi8c5_uw/view?usp=drive_link" target="_blank" class="download-link"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_no2_zonal_statistics_2021_2023.gpkg</span></a>
+              <a href="https://drive.google.com/file/d/1SFRpYoHa9ruIKjALiBBxt6cpMvCutu9D/view?usp=drive_link" target="_blank" class="download-link"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_pm2p5_zonal_statistics_2021_2023.gpkg</span></a>
+              <a href="https://drive.google.com/file/d/11L4t4h2lbAJzhc-1kZAjnG2XGjUkhW1N/view?usp=drive_link" target="_blank" class="download-link"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_pm10_zonal_statistics_2021_2023.gpkg</span></a>
+              <a href="https://drive.google.com/file/d/14alBbcdyWHUfPprxI4ZrUH6-I-vmN8Jt/view?usp=drive_link" target="_blank" class="download-link"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_no2_2023_bivariate.gpkg</span></a>
+              <a href="https://drive.google.com/file/d/1wQRL7FiUD6X4fcy5VXrRMzPor-7To36c/view?usp=drive_link" target="_blank" class="download-link"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_pm2p5_2023_bivariate.gpkg</span></a>
+              <a href="https://drive.google.com/file/d/1dqy4jQGukYJfNFSxrZ0opKhqyhIhmeGy/view?usp=drive_link" target="_blank" class="download-link"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_pm10_2023_bivariate.gpkg</span></a>
+              <a href="https://drive.google.com/file/d/1aA-zgq9_gIQGBARq1kuac2gII9dBdGsx/view?usp=drive_link" target="_blank" class="download-link"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_no2_2023_chart.gpkg</span></a>
+              <a href="https://drive.google.com/file/d/1v6bzeDN5zR-yfBu28U8W2y7kUFv6lp-u/view?usp=drive_link" target="_blank" class="download-link"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_pm2p5_2023_chart.gpkg</span></a>
+              <a href="https://drive.google.com/file/d/1sea3ndXRQwSXucBsOk1iae1IrjDezFl3/view?usp=drive_link" target="_blank" class="download-link"><i class="bi bi-file-earmark-arrow-down"></i> <span>FRANCE_pm10_2023_chart.gpkg</span></a>
             </div>
           </div>
         </div>
@@ -379,47 +378,6 @@
     </section><!-- /Downloads -->
 
   </main>
-
-  <footer id="footer" class="footer light-background">
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-5 col-md-12 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <i class="bi bi-cloud-haze2-fill" style="font-size: 1.4rem; color: var(--accent-color); margin-right:.5rem;"></i>
-            <span class="sitename">Mapping Air Quality — France</span>
-          </a>
-          <p>A GIS course project (A.A. 2025/26, Politecnico di Milano) by Group 3.</p>
-        </div>
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Website</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="methods.html">Data &amp; Methods</a></li>
-            <li><a href="results.html">Results</a></li>
-            <li><a href="webgis.html">WebGIS</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Data Sources</h4>
-          <ul>
-            <li><a href="https://ads.atmosphere.copernicus.eu/" target="_blank" rel="noopener">Copernicus CAMS</a></li>
-            <li><a href="https://land.copernicus.eu/en/products/corine-land-cover" target="_blank" rel="noopener">CORINE Land Cover</a></li>
-            <li><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Course</h4>
-          <p>Geographic Information Systems</p>
-          <p>A.A. 2025/26 — Politecnico di Milano</p>
-          <p class="mt-2"><strong>Group:</strong> <span>3 — France</span></p>
-        </div>
-      </div>
-    </div>
-    <div class="container copyright text-center mt-4">
-      <p>© <span>2026</span> <strong class="px-1 sitename">Mapping Air Quality — Group 3</strong></p>
-      <div class="credits">Built on the <a href="https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/">OnePage</a> template by <a href="https://bootstrapmade.com/">BootstrapMade</a>, customized for this project.</div>
-    </div>
-  </footer>
 
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   <div id="preloader"></div>

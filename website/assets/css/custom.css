@@ -293,8 +293,8 @@ table.aq-table td.pollutant-pm10 { border-left: 4px solid var(--aq-pm10); }
 /* Bivariate legend (3x3 matrix) */
 .bivariate-legend {
   display: inline-grid;
-  grid-template-columns: repeat(3, 34px);
-  grid-template-rows: repeat(3, 34px);
+  grid-template-columns: repeat(5, 34px);
+  grid-template-rows: repeat(5, 34px);
   gap: 2px;
   transform: scaleY(-1);
 }
