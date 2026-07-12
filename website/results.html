@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Results | Mapping Air Quality — France, Group 3</title>
+  <title>Results | Mapping Air Quality - France, Group 3</title>
   <meta name="description" content="Statistical tables, charts, bivariate maps and population exposure results for the France air quality GIS project.">
 
   <link href="assets/img/favicon.png" rel="icon">
@@ -285,7 +285,12 @@
           <div class="tab-pane fade show active" id="zonal-no2">
             <div class="row gy-4">
               <div class="col-lg-6">
-                <p> tesa</p>
+                <p class="small" style="line-height: 1.6; color: #495057;">
+  The zonal statistics reveal a clear correlation between built area persistence and changes in NO<sub>2</sub> concentrations. <strong>Stable zones</strong>-areas where the built footprint was maintained throughout the period-experienced a mean decrease in NO<sub>2</sub> concentration of <strong>-0.9458 &micro;g/m&sup3;</strong>. <strong>Gain zones</strong>, representing areas where new built surfaces appeared by 2023, showed an identical mean reduction of <strong>-0.9458 &micro;g/m&sup3;</strong>. On the other hand, <strong>Loss zones</strong>, where areas classified as built in 2021 were transitioned out by 2023, recorded the weakest improvement with a mean decrease of only <strong>-0.7137 &micro;g/m&sup3;</strong>. 
+</p>
+<p class="small" style="line-height: 1.6; color: #495057;">
+  While all three transition classes show an overall decline in nitrogen dioxide consistent with regional emission trends, the lower reduction in Loss zones indicates distinct environmental dynamics in areas transitioning away from built infrastructure. The minimum value (-4.6751 &micro;g/m&sup3;) and the maximum value (3.1563 &micro;g/m&sup3;) are identical across all three zones, reflecting the global spatial footprint of the input AMAC raster across these intersecting masks.
+</p>
                 <div class="data-table-wrap">
                   <table class="aq-table">
                     <thead><tr><th>Crop Transition Class</th><th>Mean Change</th><th>Min Change</th><th>Max Change</th></tr></thead>
@@ -300,7 +305,6 @@
               <div class="col-lg-6">
                 <div class="chart-card">
                   <h3>Bar Char NO2</h3>
-                  <p class="chart-sub">Sample data — µg/m³, 2023 annual mean</p>
                   <canvas id="chart-no2-bar"></canvas>
                 </div>
               </div>
@@ -310,6 +314,12 @@
           <div class="tab-pane fade" id="zonal-pm25">
             <div class="row gy-4">
               <div class="col-lg-6">
+                <p class="small" style="line-height: 1.6; color: #495057;">
+  The zonal statistics for PM<sub>2.5</sub> indicate that land cover persistence in agricultural crop zones influences particulate distribution patterns. <strong>Stable zones</strong>-areas where agricultural land use remained unchanged-exhibited a mean decrease in PM<sub>2.5</sub> concentration of <strong>-0.8898 &micro;g/m&sup3;</strong>. <strong>Gain zones</strong>, where new crop surfaces were established by 2023, recorded a mean reduction of <strong>-0.7395 &micro;g/m&sup3;</strong>. <strong>Loss zones</strong>, where 2021 crop areas transitioned to other classes, showed the most limited improvement with a mean decrease of <strong>-0.7060 &micro;g/m&sup3;</strong>.
+</p>
+<p class="small" style="line-height: 1.6; color: #495057;">
+  These findings highlight that while the entire study area follows the national downward trend for PM<sub>2.5</sub>, the rate of reduction is marginally higher in stable agricultural environments. The consistency of the minimum (-4.6751 &micro;g/m&sup3;) and maximum (3.1563 &micro;g/m&sup3;) values across all transition classes suggests that extreme atmospheric events and regional climate fluctuations exert a more significant influence on local concentrations than localized land-cover transitions alone.
+</p>
                 <div class="data-table-wrap">
                   <table class="aq-table">
                     <thead><tr><th>Crop Transition Class</th><th>Mean Change</th><th>Min Change</th><th>Max Change</th></tr></thead>
@@ -340,7 +350,6 @@
           <div class="col-lg-6">
             <div class="chart-card">
               <h3>Bar Char PM2.5</h3>
-              <p class="chart-sub">Sample data — µg/m³, 2023 annual mean</p>
               <canvas id="chart-pm25-bar"></canvas>
             </div>
             </div>
@@ -351,7 +360,7 @@
           <div class="row gy-4">
             <div class="col-lg-6">
               <p class="small" style="line-height: 1.6; color: #495057;">
-  The zonal statistics reveal a consistent pattern linking tree cover persistence to greater PM<sub>10</sub> reduction. Stable zones—areas where tree cover was maintained throughout the period—experienced the largest mean decrease in PM<sub>10</sub> concentration (-1.0476 &micro;g/m&sup3;). Gain zones, where new tree cover appeared by 2023, showed a slightly smaller reduction (-0.9856 &micro;g/m&sup3;). Loss zones, where trees present in 2021 were converted to other land cover classes by 2023, recorded the weakest improvement (-0.9227 &micro;g/m&sup3;). While all three zones show an overall decline in PM<sub>10</sub> consistent with the nationwide downward trend identified in the AMAC analysis, the gradient across zones suggests that tree cover contributes to particulate matter removal through canopy interception and dry deposition. The minimum value is identical across all three zones (-4.3773 &micro;g/m&sup3;), reflecting the global extent of the AMAC raster. The maximum value for Loss (0.7946 &micro;g/m&sup3;) is notably lower than for Stable and Gain (1.1967 &micro;g/m&sup3;), indicating that the areas where PM<sub>10</sub> increased the most did not coincide with zones of tree loss.
+  The zonal statistics reveal a consistent pattern linking tree cover persistence to greater PM<sub>10</sub> reduction. Stable zones-areas where tree cover was maintained throughout the period-experienced the largest mean decrease in PM<sub>10</sub> concentration (-1.0476 &micro;g/m&sup3;). Gain zones, where new tree cover appeared by 2023, showed a slightly smaller reduction (-0.9856 &micro;g/m&sup3;). Loss zones, where trees present in 2021 were converted to other land cover classes by 2023, recorded the weakest improvement (-0.9227 &micro;g/m&sup3;). While all three zones show an overall decline in PM<sub>10</sub> consistent with the nationwide downward trend identified in the AMAC analysis, the gradient across zones suggests that tree cover contributes to particulate matter removal through canopy interception and dry deposition. The minimum value is identical across all three zones (-4.3773 &micro;g/m&sup3;), reflecting the global extent of the AMAC raster. The maximum value for Loss (0.7946 &micro;g/m&sup3;) is notably lower than for Stable and Gain (1.1967 &micro;g/m&sup3;), indicating that the areas where PM<sub>10</sub> increased the most did not coincide with zones of tree loss.
 </p>
               <div class="data-table-wrap">
                 <table class="aq-table">
@@ -367,7 +376,6 @@
             <div class="col-lg-6">
               <div class="chart-card">
                 <h3>Mean PM10 by region</h3>
-                <p class="chart-sub">Sample data — µg/m³, 2023 annual mean</p>
                 <canvas id="chart-pm10-bar"></canvas>
               </div>
             </div>
@@ -378,7 +386,7 @@
           <div class="col-12">
             <div class="chart-card">
               <h3>2021 → 2023 Annual Mean Aggregation Change (AMAC)</h3>
-              <p class="chart-sub">Sample data — average change in µg/m³ across France, by pollutant</p>
+              <p class="chart-sub">Sample data - average change in µg/m³ across France, by pollutant</p>
               <canvas id="chart-amac"></canvas>
             </div>
           </div>
@@ -389,8 +397,8 @@
     <!-- Step 7: Bivariate mapping -->
     <section class="section">
       <div class="container section-title text-start" data-aos="fade-up">
-        <h2>Bivariate Mapping — Population X Pollution</h2>
-        <!-- <p>Step 7 — combining <code>pop_class_median</code> and <code>pol_class_max</code> per zone</p> -->
+        <h2>Bivariate Mapping - Population X Pollution</h2>
+        <!-- <p>Step 7 - combining <code>pop_class_median</code> and <code>pol_class_max</code> per zone</p> -->
       </div>
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <ul class="nav pollutant-tabs mb-4" id="bivariateTabs">
@@ -431,6 +439,12 @@
                 <div class="bivariate-legend-wrap">
                   <div class="bivariate-axis-y">Population →</div>
                   <div>
+                    <p class="small text-muted mt-3 mb-0">
+  This layer classifies the 96 French departments based on median population density (<code>pop_class_median</code>) and maximum PM<sub>2.5</sub> concentration (<code>pol_class_max</code>). 
+  Regarding PM<sub>2.5</sub>, we observe that the majority of departments are contained within lower concentration thresholds, with significant elevations appearing in the <strong>&Icirc;le-de-France</strong> urban core and major industrial corridors in the <strong>Nord</strong> and <strong>Grand Est</strong> regions. 
+  The most frequent bivariate class remains 11 (low population, low PM<sub>2.5</sub>), covering the expansive rural interior of France. In contrast, the highest intensity class (25: high population + high PM<sub>2.5</sub>) is almost exclusively localized in the densest administrative centers, underscoring the strong positive correlation between fine particulate matter concentrations and intensive urban/industrial land use.
+</p>
+<br>
                     <div class="bivariate-legend" id="bivariateLegendPm25"></div>
                     <div class="bivariate-axis-x">PM2.5 concentration →</div>
                   </div>
@@ -492,7 +506,7 @@ The most frequent bivariate class is 11 (low population, low PM10) with 70 depar
               <div class="card-face-back" style="border-top: 4px solid #1b6ca8; padding-top: 1rem;">
                 <h5 class="text-primary h6 mb-3" style="font-weight: 600;"><i class="bi bi-info-circle"></i> NO<sub>2</sub> Exposure Analysis</h5>
                 <p class="small" style="line-height: 1.6; color: #495057;">
-                  Total population exposure was computed by dissolving the bivariate layer by pollution class (<code>pol_class_max</code>) and running Zonal Statistics against the raw WorldPop population count raster (sum statistic). Results show that <strong>39.7%</strong> of France's population lives in areas classified as NO<sub>2</sub> concentration level 1 (&le; 10 &micro;g/m&sup3;), while the majority, <strong>60.3%</strong>, is exposed to level 2 concentrations (&gt;10 and &le; 20 &micro;g/m&sup3;). Because NO<sub>2</sub> pollution levels correspond tightly with urban intensity, the most densely populated administrative zones of the country—notably the urban core of the <strong>&Icirc;le-de-France</strong> region—fall entirely into the higher concentration category, resulting in a disproportionately high share of the national population being exposed to elevated nitrogen dioxide levels relative to the geographic area these zones represent.
+                  Total population exposure was computed by dissolving the bivariate layer by pollution class (<code>pol_class_max</code>) and running Zonal Statistics against the raw WorldPop population count raster (sum statistic). Results show that <strong>39.7%</strong> of France's population lives in areas classified as NO<sub>2</sub> concentration level 1 (&le; 10 &micro;g/m&sup3;), while the majority, <strong>60.3%</strong>, is exposed to level 2 concentrations (&gt;10 and &le; 20 &micro;g/m&sup3;). Because NO<sub>2</sub> pollution levels correspond tightly with urban intensity, the most densely populated administrative zones of the country-notably the urban core of the <strong>&Icirc;le-de-France</strong> region-fall entirely into the higher concentration category, resulting in a disproportionately high share of the national population being exposed to elevated nitrogen dioxide levels relative to the geographic area these zones represent.
                   This severe visual skew is highly correlated with the localized expansion of major impervious transport corridors and artificial dense urban layouts evaluated in our step 5 criteria models.
                 </p>
                 <div class="mt-auto pt-2 border-top text-muted small"><i class="bi bi-cursor"></i> Click card to view pie chart</div>
@@ -518,12 +532,9 @@ The most frequent bivariate class is 11 (low population, low PM10) with 70 depar
               <!-- Back Side -->
               <div class="card-face-back" style="border-top: 4px solid #2ecc71; padding-top: 1rem;">
                 <h5 class="text-success h6 mb-3" style="font-weight: 600;"><i class="bi bi-info-circle"></i> PM<sub>2.5</sub> Exposure Analysis</h5>
-                <p class="small" style="line-height: 1.6; color: #495057;">
-                  Fine particulate tracking indicates widespread medium-to-high threshold exposure levels across traditional agricultural crop corridors.
-                </p>
-                <p class="small" style="line-height: 1.6; color: #495057;">
-                  Because these micro-aerosols easily bypass natural standard filtering biological barriers, these persistent regional clusters represent the highest baseline public health priority found in this study.
-                </p>
+<p class="small" style="line-height: 1.6; color: #495057;">
+  Unlike NO<sub>2</sub>, PM<sub>2.5</sub> concentrations demonstrate a significant spatial correlation with <strong>agricultural crop corridors</strong>, where intensive farming practices contribute to higher baseline particulate levels. These micro-aerosols, capable of bypassing biological filtration, represent a persistent public health challenge across both rural-fringe and dense urban sectors of the study area.
+</p>
                 <div class="mt-auto pt-2 border-top text-muted small"><i class="bi bi-cursor"></i> Click card to view pie chart</div>
               </div>
               
@@ -641,7 +652,7 @@ The most frequent bivariate class is 11 (low population, low PM10) with 70 depar
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/js/main.js"></script>
 
-  <!-- Chart.js (vendored — assets/vendor/chartjs/, works fully offline) -->
+  <!-- Chart.js (vendored - assets/vendor/chartjs/, works fully offline) -->
   <script src="assets/vendor/chartjs/chart.umd.js"></script>
   <script src="assets/js/results-charts.js"></script>
 
